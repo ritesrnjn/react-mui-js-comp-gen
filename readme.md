@@ -1,6 +1,7 @@
-## React-MaterialUi Component Generator
+## React-MaterialUI Component Generator
 
-This projects creates web components using React and Material UI
+This projects creates web components using React and Material UI.
+
 These components can be used outside a react project as a regular js library.
 
 #### Development
