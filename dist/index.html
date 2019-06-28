@@ -10,26 +10,31 @@
 
 <body>
 <div id="root"></div>
+<p><button onclick="enableBtn()">enable button</button></p>
+<p>Button clicked <span id="count">0</span> times</p>
+
 <script src="main.bundle.js"></script>
 
 <script type="text/javascript">
-    // Bind Props
+
+    // callback prop
+    function onClick(val) {
+        document.getElementById('count').innerHTML = val;
+    }
+
+    // Component Props
     var componentProps = {
-        name: 'Balla',
+        disabled: false,
+        onClick: onClick,
         ref: function (ref) {
-            this.btnComp = ref;
+            this.comp = ref;
         }
     };
 
-    // Update Props
-    setTimeout(function () {
-        this.btnComp.updateName('Ritesh')
-    }, 2000);
-
-    // Get Props
-    setTimeout(function () {
-        console.log(this.btnComp.state.count);
-    }, 4000);
+    // Update Component Props
+    function enableBtn() {
+        this.comp.updateButton(false)
+    }
 
     // Render Component
     ReactDOM.render(

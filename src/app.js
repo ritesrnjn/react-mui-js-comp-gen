@@ -6,22 +6,24 @@ class ButtonComp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: props.name ? props.name : '',
+            disabled: props.disabled ? props.disabled : true,
             count: 0
         };
     }
 
-    updateName = name => this.setState({name});
+    updateButton = disabled => this.setState({disabled});
 
     handleClick = () => {
-        this.setState({count: this.state.count+1})
+        let count = this.state.count+1;
+        this.setState({count});
+        this.props.onClick(count)
     };
 
     render() {
-        const {name, count}= this.state;
+        const {disabled}= this.state;
         return (
-            <Button variant="contained" color="primary" onClick={this.handleClick}>
-                {name} {count}
+            <Button variant="contained" color="primary" disabled={disabled} onClick={this.handleClick}>
+                Click me!
             </Button>
         )
     }
