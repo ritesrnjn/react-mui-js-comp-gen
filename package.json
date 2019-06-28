@@ -1,0 +1,21 @@
+{
+  "name": "react_standalone",
+  "version": "1.0.0",
+  "description": "create standalone react components",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve dist",
+    "babel": "babel src/app.js --watch --out-file dist/main.bundle.js"
+  },
+  "author": "ritesrnjn@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-minify": "^0.5.0",
+    "serve": "^11.0.2"
+  }
+}
