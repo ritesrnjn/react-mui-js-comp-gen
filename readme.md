@@ -6,11 +6,11 @@ These components can be used outside a react project as a regular js library.
 
 #### Development
 
-1. `npm install`
+1. `npm install` - Installs dependencies
 
-2. `npm run babel` Watches js file for changes and compiles it.
+2. `npm run babel` - Watches js file for changes and compiles it.
 
-3. `serve dist` starts a node server and run the compiled script in browser.
+3. `serve dist` - Starts a node server to serve webpage with transpiled script.
 
 #### Dependencies
 
